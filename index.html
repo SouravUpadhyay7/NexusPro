@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusPro | Project Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <h1>NexusPro</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Projects</a>
+                <a href="#">Teams</a>
+                <a href="#">Analytics</a>
+            </div>
+            <div class="user-profile">
+                <img src="male-avatar-boy-face-man-user-9.svg" alt="User Profile">
+                <span>John Doe</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="controls">
+            <div class="search-bar">
+                <input type="text" placeholder="Search tasks...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="action-buttons">
+                <button class="btn add-task"><i class="fas fa-plus"></i> New Task</button>
+                <button class="btn filter"><i class="fas fa-filter"></i> Filter</button>
+                <button class="btn sort"><i class="fas fa-sort"></i> Sort</button>
+                <button class="btn view-toggle"><i class="fas fa-th-large"></i> View</button>
+            </div>
+        </div>
+
+        <div class="board-container">
+            <div class="board-column">
+                <div class="column-header">
+                    <h3>To Do</h3>
+                    <span class="task-count">3</span>
+                </div>
+                <div class="task-list" id="todo">
+                    <div class="task" draggable="true" data-task-id="1">
+                        <div class="task-priority high"></div>
+                        <h4>UI/UX Redesign</h4>
+                        <p>Redesign dashboard interface with modern aesthetics</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar"></i> Apr 5, 2025</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task" draggable="true" data-task-id="2">
+                        <div class="task-priority medium"></div>
+                        <h4>Content Creation</h4>
+                        <p>Prepare content for marketing campaign</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar"></i> Apr 10, 2025</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task" draggable="true" data-task-id="3">
+                        <div class="task-priority low"></div>
+                        <h4>Documentation</h4>
+                        <p>Update user documentation with new features</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar"></i> Apr 15, 2025</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-column">
+                <div class="column-header">
+                    <h3>In Progress</h3>
+                    <span class="task-count">2</span>
+                </div>
+                <div class="task-list" id="inprogress">
+                    <div class="task" draggable="true" data-task-id="4">
+                        <div class="task-priority high"></div>
+                        <h4>API Integration</h4>
+                        <p>Integrate payment gateway API with user dashboard</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar"></i> Apr 7, 2025</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task" draggable="true" data-task-id="5">
+                        <div class="task-priority medium"></div>
+                        <h4>Database Migration</h4>
+                        <p>Migrate user data to new cloud database</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar"></i> Apr 12, 2025</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-column">
+                <div class="column-header">
+                    <h3>Review</h3>
+                    <span class="task-count">2</span>
+                </div>
+                <div class="task-list" id="review">
+                    <div class="task" draggable="true" data-task-id="6">
+                        <div class="task-priority high"></div>
+                        <h4>Security Audit</h4>
+                        <p>Perform security review of authentication flow</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar"></i> Apr 3, 2025</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task" draggable="true" data-task-id="7">
+                        <div class="task-priority medium"></div>
+                        <h4>Performance Testing</h4>
+                        <p>Run load tests on new server architecture</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar"></i> Apr 8, 2025</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-column">
+                <div class="column-header">
+                    <h3>Completed</h3>
+                    <span class="task-count">3</span>
+                </div>
+                <div class="task-list" id="completed">
+                    <div class="task completed" draggable="true" data-task-id="8">
+                        <div class="task-priority high"></div>
+                        <h4>Login Flow</h4>
+                        <p>Implement secure login and authentication</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar-check"></i> Completed</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task completed" draggable="true" data-task-id="9">
+                        <div class="task-priority high"></div>
+                        <h4>Frontend Setup</h4>
+                        <p>Setup React project with component structure</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar-check"></i> Completed</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="task completed" draggable="true" data-task-id="10">
+                        <div class="task-priority medium"></div>
+                        <h4>Wireframing</h4>
+                        <p>Create wireframes for mobile application</p>
+                        <div class="task-meta">
+                            <span class="due-date"><i class="far fa-calendar-check"></i> Completed</span>
+                            <div class="assigned-to">
+                                <img src="male-avatar-boy-face-man-user-9.svg" alt="Assigned User">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Task Title</label>
+                    <input type="text" id="taskTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="taskDescription">Description</label>
+                    <textarea id="taskDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="taskPriority">Priority</label>
+                    <select id="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="taskDueDate">Due Date</label>
+                    <input type="date" id="taskDueDate">
+                </div>
+                <div class="form-group">
+                    <label for="taskAssignee">Assignee</label>
+                    <select id="taskAssignee">
+                        <option value="1">John Doe</option>
+                        <option value="2">Jane Smith</option>
+                        <option value="3">David Johnson</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="btn cancel">Cancel</button>
+                    <button type="submit" class="btn save">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
